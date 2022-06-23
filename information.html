@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="statics/css/bootstrap.min.css" rel="stylesheet">
+  <script src="statics/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    #map {
+      background-size: 100% 704px;
+      border: 2px;
+      border-radius: 5px;
+      width: 100%;
+      height: 704px;
+      position: relative;
+    }
+
+    #map a {
+      display: block;
+      position: absolute;
+    }
+
+    #map :hover {
+      border: 5px;
+    }
+
+    .logo {
+      font-family: monospace;
+      font-size: xx-large;
+      font-size: xx-large;
+      margin-top: 15px
+    }
+
+    .body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    .trHeader {
+      table-layout: auto;
+      border: 5px;
+      border-radius: 3px;
+      border-color: rgb(255, 255, 94);
+      text-decoration: underline;
+      color: black;
+      background-color: grey;
+
+    }
+
+    .paragraph {
+      font-size: 1.5rem;
+      font-family: sans-serif;
+    }
+
+    .table {
+      width: 30%;
+      text-align: center;
+
+    }
+  </style>
+
+
+</head>
+
+<body class="container h-100 text-center">
+  <header>
+
+    <div class="px-3 py-2 bg-dark text-white">
+      <div class="container">
+        <!-- Logo will be here -->
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="index.html"
+            class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <img class="bi me-2" width="45" height="40" role="img" aria-label="Bootstrap" src="images/focus.png">
+            <p class="logo">
+              WHICHCAM</p>
+          </a>
+
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="index.html" class="nav-link text-blue">
+                <!-- put a img tag (without close) instead of all svg files to show the and put src for them -->
+                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/home.png">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="information.html" class="nav-link text-blue">
+                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/innovation.png">
+                Information
+              </a>
+            </li>
+
+            <li>
+              <a href="contactus.html" class="nav-link text-blue">
+                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/contactus.png">
+                Contact us
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <img class="bi d-block mt-1 mx-auto" width="30" height="30" src="images/product.png">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                aria-expanded="false">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                <li><a class="dropdown-item" href="Canon.html">Canon</a></li>
+                <li><a class="dropdown-item" href="Nikon.html">Nikon</a></li>
+                <li><a class="dropdown-item" href="Sony.html">Sony</a></li>
+              </ul>
+            </li>
+
+          </ul>
+          <button onclick="myFunction()" class="btn btn-info">Dark/Light</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <br>
+    <br>
+    <div id="map"></div>
+    <h1 class="mt-4">About Map:</h1>
+    <p class="paragraph mt-5"><strong>Look for the camera on the map.</strong>There is a marker provided for those ones who want
+      to purchase their own Camera in-store. The marker shows a Best Buy store in downtown Nanaimo which has all three
+      kinds of camera we compaired here.</p>
+
+    <br>
+
+
+    </div>
+
+  </main>
+
+  <script>
+    function initMap() {
+
+      var nanaimo = { lat: 49.18496, lng: -123.96829 };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: nanaimo,
+
+      });
+
+      var marker = new google.maps.Marker({ position: nanaimo, map: map });
+      
+      const marker1 = new google.maps.Marker({
+        position: { lat: 49.23695793757599, lng: -124.04899149579697 }, map,
+        icon: "images/camera.png",
+      });
+
+    }
+
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+
+  </script>
+
+
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM53d-ZeujlwXDg1D4a-hy47bcsKVRe5E&callback=initMap"></script>
+</body>
+
+
+<!-- FOOTER -->
+<footer class="container py-4 my-2 border-top">
+  <p class="mx-auto">
+  <p>&copy;2021 WHICHCAM, Inc.&middot;<a href="#">Privacy</a>&middot;<a href="#">Terms</a></p>
+  <a href="#">Back to top</a></p>
+
+  <div>
+    <table class="table mx-auto">
+      <tr class="trHeader">
+        <th>Designer</th>
+        <th>Category</th>
+        <th>Date</th>
+      </tr>
+      <tr class="bg-dark text-muted">
+        <td>Milad Fotoohnejad</td>
+        <td>Camera Info</td>
+        <td>12/14/2021</td>
+      </tr>
+    </table>
+  </div>
+
+</footer>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="statics/css/bootstrap.min.css" rel="stylesheet">
+    <script src="statics/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* .hero-image {
+            background-image: url("images/CanBack2.png");
+            background-color: black;
+            height: 500px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        } */
+        .para {
+            text-align: center;
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .logo {
+            font-family: monospace;
+            font-size: xx-large;
+            font-size: xx-large;
+            margin-top: 15px
+        }
+
+        .trHeader {
+            table-layout: auto;
+            border: 5px;
+            border-radius: 3px;
+            border-color: rgb(255, 255, 94);
+            text-decoration: underline;
+            color: black;
+            background-color: grey;
+
+        }
+
+        .table {
+            width: 30%;
+            text-align: center;
+
+        }
+    </style>
+
+</head>
+
+<body class="container-fluid h-100 text-center text-white bg-dark">
+    <header>
+
+        <div class="px-3 py-2 bg-dark text-white">
+            <div class="container">
+                <!-- Logo will be here -->
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="index.html"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <img class="bi me-2" width="45" height="40" role="img" aria-label="Bootstrap"
+                            src="images/focus.png">
+                        <p class="logo">
+                            WHICHCAM</p>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="index.html" class="nav-link text-blue">
+                                <!-- put a img tag (without close) instead of all svg files to show the and put src for them -->
+                                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/home.png">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="information.html" class="nav-link text-blue">
+                                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/innovation.png">
+                                Information
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contactus.html" class="nav-link text-blue">
+                                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/contactus.png">
+                                Contact us
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <img class="bi d-block mt-1 mx-auto" width="30" height="30" src="images/product.png">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                                aria-expanded="false">Products</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="Canon.html">Canon</a></li>
+                                <li><a class="dropdown-item" href="Nikon.html">Nikon</a></li>
+                                <li><a class="dropdown-item" href="Sony.html">Sony</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-3 py-2 border-top mb-3">
+
+        <!-- <div class="hero-image">
+            <div class="px-3 py-2 border-bottom mb-3">
+                <div class="container d-flex flex-wrap justify-content-center">
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="container p-md-5 col-md-8 ">
+            <h2 class="mb-5 border border-width border-3 border-light">Find out more about Sony Alpha 7 III</h2>
+            <img class="img-fluid rounded-3" src="images/Sony-A7rIII.jpeg" alt="canon" width="800" height="800">
+            <p class="para mt-4">Capture the peaks of more decisive moments with the α7 III from Sony packing newly
+                developed back-illuminated full-frame CMOS sensor and other advanced imaging innovations, high-speed
+                response, ease of operation, and reliable durability that are ready for various shooting needs. With
+                outstanding imaging capability and high-speed performance contained in a compact body, the α7 III gives
+                you the power, precision and flexibility to capture once-in-a-lifetime moments just as you like. A newly
+                developed back-illuminated image sensor and evolved image processing system fulfil various shooting
+                needs with high-quality imaging capabilities that you would expect only of a full-frame camera. Standard
+                ISO range is extended to ISO 100-51200 (expandable to ISO 50-204800 for stills), while Detail
+                Reproduction and Area-specific Noise Reduction technologies maintain image details and cut noise. With
+                highly effective performance in mid-to-high sensitivity ranges, you can shoot at high ISO with no
+                concerns about noise and image deterioration.</p>
+            <button type="button" class="btn btn-light" data-bs-toggle="popover" title="Milad"
+                data-bs-content="Sony Is The One!">Click Me</button>
+
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#myModal">
+                Features
+            </button>
+
+        </div>
+
+
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+
+                    <div class="modal modal-tour position-static d-block text-dark bg-dark py-5" tabindex="-1"
+                        role="dialog" id="modalTour">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-6 shadow">
+                                <div class="modal-body p-5">
+                                    <h2 class="fw-bold mb-5">Features</h2>
+
+                                    <ul class="d-grid gap-5">
+                                        <li class="d-flex gap-5">
+                                            <img class="bi text-muted flex-shrink-0" src="images/sensor.png" width="58"
+                                                height="58">
+                                            <div>
+                                                <h5 class="mb-1 mt-2">Full-frame</h5>
+                                                24.2 MP5 35 mm full-frame CMOS sensor with back-illuminated design
+                                            </div>
+                                        </li>
+                                        <li class="d-flex gap-5">
+                                            <img class="bi text-warning flex-shrink-0" src="images/wifi-signal.png"
+                                                width="58" height="58">
+                                            <div>
+                                                <h5 class="mb-1 mt-2">Connectivity</h5>
+                                                Wi-Fi NFC Bluetooth QR-code
+                                            </div>
+                                        </li>
+                                        <li class="d-flex gap-5">
+                                            <img class="bi text-primary flex-shrink-0" src="images/water-proof.png"
+                                                width="58" height="58">
+                                            <div>
+                                                <h5 class="mb-1 mt-2">Water-resistant</h5>
+                                                Dust and Moisture resistant
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg btn-warning mt-5 w-100"
+                                        data-bs-dismiss="modal" data-bs-target="#myModal">Great, thanks!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+
+</body>
+
+<!-- FOOTER -->
+<footer class="container py-4 my-2 border-top">
+    <p class="mx-auto">
+    <p>&copy;2021 WHICHCAM, Inc.&middot; <a href="#">Privacy</a>&middot;<a href="#">Terms</a></p>
+    <a href="#">Back to top</a></p>
+    
+    <div>
+        <table class="table mx-auto">
+            <tr class="trHeader">
+                <th>Designer</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+            <tr class="bg-dark text-muted">
+                <td>Milad Fotoohnejad</td>
+                <td>Camera Info</td>
+                <td>12/14/2021</td>
+            </tr>
+        </table>
+    </div>
+    
+</footer>
+</html>

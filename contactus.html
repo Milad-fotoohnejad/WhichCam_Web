@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="statics/css/bootstrap.min.css" rel="stylesheet">
+    <script src="statics/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .multicolortext1 {
+            text-align: center;
+            background-image: linear-gradient(to left, Yellow, white);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: monospace;
+        }
+
+        .multicolortext2 {
+            text-align: center;
+            background-image: linear-gradient(to left, red, yellow);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: monospace;
+        }
+
+        .multicolortext3 {
+            text-align: center;
+            background-image: linear-gradient(to left, pink, red);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: monospace;
+        }
+
+        .logo {
+            font-family: monospace;
+            font-size: xx-large;
+            font-size: xx-large;
+            margin-top: 15px
+        }
+
+        .trHeader {
+            border: 5px;
+            border-radius: 3px;
+            border-color: rgb(255, 255, 94);
+            text-decoration: underline;
+            color: black;
+            background-color: gray;
+        }
+
+        .table {
+            width: 30%;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body class="container-fluid h-100 text-center text-white bg-dark">
+
+    <header>
+        <div class="px-3 py-2 bg-dark text-white">
+            <div class="container">
+                <!-- Logo will be here -->
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="index.html"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <img class="bi me-2" width="45" height="40" role="img" aria-label="Bootstrap"
+                            src="images/focus.png">
+                        <p class="logo">
+                            WHICHCAM</p>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="index.html" class="nav-link text-blue">
+                                <!-- put a img tag (without close) instead of all svg files to show the and put src for them -->
+                                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/home.png">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="information.html" class="nav-link text-blue">
+                                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/innovation.png">
+                                Information
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contactus.html" class="nav-link text-blue">
+                                <img class="bi d-block mx-auto mb-1" width="30" height="30" src="images/contactus.png">
+                                Contact us
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <img class="bi d-block mt-1 mx-auto" width="30" height="30" src="images/product.png">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                                aria-expanded="false">Products</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="Canon.html">Canon</a></li>
+                                <li><a class="dropdown-item" href="Nikon.html">Nikon</a></li>
+                                <li><a class="dropdown-item" href="Sony.html">Sony</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div>
+            <!-- </div> -->
+            <div class="container col-xl-10 col-xxl-10 px-4 py-5 border-top">
+                <div class="row align-items-center g-lg-5 py-5">
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <h1 class="display-4 fw-bold lh-1 mb-3">Sign up here</h1>
+                        <p class="col-lg-10 fs-4">Here you can sign up in our website and we will inform you by emails
+                            about
+                            new <span class="multicolortext1">Accessories</span>, <span
+                                class="multicolortext2">Cameras</span>, and <span class="multicolortext3">HOT
+                                DEALS</span> available. Your information will be safe here and will not be seen by
+                            anyone
+                            including our staff. We will contact you soon. </p>
+                    </div>
+                    <div class="col-md-10 mx-auto col-lg-12">
+                        <form class="p-4 p-md-5 border rounded-3 bg-dark" onsubmit="return checkCode(event)"
+                            method="POST" action="https://dev.itas.ca/~croftd/processForm.php">
+
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+                                <label class="text-dark">Name:</label>
+                            </div>
+
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Family">
+                                <label class="text-dark">Family:</label>
+                            </div>
+
+                            <div class="form-floating mb-2">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label class="text-dark">Email address:</label>
+                            </div>
+
+                            <div class="form-floating mb-2">
+                                <input class="form-control" type="text" name="postal/zipcode" id="postalcode"
+                                    placeholder="PostalCode">
+                                <Label class="text-dark">Postal Code:</Label>
+                            </div>
+
+                            <div class="form-floating mb-2">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                                <label class="text-dark">Password:</label>
+                            </div>
+
+                            <div class="mb-2">
+                                <textarea name="text" class="form-control" id="comment" rows="5"
+                                    placeholder="Comments"></textarea>
+                                <label class="text-dark" for="comment">Comments:</label>
+                            </div>
+
+                            <div class="checkbox mb-3 text-white">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+
+                            <button class="w-100 btn btn-lg btn-warning" type="submit">Sign up</button>
+                            <p id="demo"></p>
+                            <hr class="my-4">
+                            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script>
+        function checkCode(e) {
+            console.log("Checking postalCode");
+
+            // Get the value of the input field with id="numb"
+            var postal = document.getElementById("postalcode");
+
+            var regex = new RegExp(/^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i);
+
+            var valid;
+            if (regex.test(postal.value)) {
+                console.log("This is true");
+                text = "Valid postal code";
+                e.preventDefault();
+                valid = true;
+            } else {
+                console.log("This is not a valid postal code");
+                text = "Not valid postal code";
+                e.preventDefault();
+                valid = false;
+            }
+            document.getElementById("demo").innerHTML = text;
+            return valid;
+        }
+
+
+    </script>
+    </div>
+
+
+
+</body>
+
+
+<!-- FOOTER -->
+<footer class="container py-4 my-2 border-top">
+    <p class="mx-auto">
+    <p>&copy;2021 WHICHCAM, Inc.&middot;<a href="#">Privacy</a>&middot;<a href="#">Terms</a></p>
+    <a href="#">Back to top</a></p>
+    
+    <div>
+        <table class="table mx-auto">
+            <tr class="trHeader">
+                <th>Designer</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+            <tr class="bg-dark text-muted">
+                <td>Milad Fotoohnejad</td>
+                <td>Camera Info</td>
+                <td>12/14/2021</td>
+            </tr>
+        </table>
+    </div>
+    
+</footer>
+</html>
